@@ -1,0 +1,83 @@
+$color: #ccc;
+$rotate_360: rotate(360deg);
+$rotateX_360: rotateX(360deg);
+$rotateY_360: rotateX(360deg);
+$rotate_0: rotate(0deg);
+$rotateX_0: rotateX(0deg);
+$rotateY_0: rotateX(0deg);
+
+@function animation($title){
+    @return $title 8s linear infinite;
+}
+
+@mixin prefix($property, $value){
+    -webkit-#{$property}: $value;
+    -moz-#{$property}: $value;
+    -o-#{$property}: $value;
+    #{$property}: $value;
+}
+
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+html{
+    height: 100%;
+}
+body {
+    height: 100%;
+}
+
+.box{
+    color: $color;
+    background-color: red;
+}
+input.ng-invalid {
+    background-color: lightblue;
+}
+
+.flower {
+    position: absolute;
+    @include prefix(animation, animation(myfirst));
+
+}
+.flower1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    @include prefix(animation, animation(myfirst1));
+}
+
+@include keyframes(myfirst) {
+    100% {
+        @include prefix(transform, $rotate_360);
+
+    }
+    0% {
+        @include prefix(transform, $rotate_0);
+
+    }
+}
+
+@include keyframes(myfirst1) {
+    100% {
+        @include prefix(transform, $rotate_0);
+        //@include prefix(transform, $rotateY_0);
+    }
+    0% {
+        @include prefix(transform, $rotate_360);
+        //@include prefix(transform, $rotateY_360);
+    }
+}
+
