@@ -1,6 +1,6 @@
 @mixin background($img){
   background: url($img) no-repeat center;
-  background-size: 100% 100%;
+  background-size: 100% auto;
 }
 @function animation($title){
   @return $title 6s linear infinite;
@@ -111,7 +111,7 @@ html {
     width: 28rem;
     top: 0;
     left: 0;
-    @include prefix(animation, animate-start 3000ms linear 0ms forwards);
+    -webkit-animation: animate-start 3000ms linear 0ms forwards, warp-around 1000ms linear 11000ms forwards;
 
     .roll_first,
     .roll_second,
@@ -123,17 +123,16 @@ html {
       height: 28rem;
       width: 28rem;
       @include background('../images/Circle1.png');
-      @include prefix(animation, myfirst1 2000ms linear infinite 3000ms forwards);
+      @include prefix(animation, myfirst1 2000ms linear  3000ms forwards);
     }
     .roll_second {
       @include background('../images/Circle2.png');
-      //animation: animate-start2 20ms linear 2000ms, myfirst2 2000ms linear 3000ms;
-      @include prefix(animation, myfirst2 5000ms linear infinite 3000ms);
+      -webkit-animation: myfirst2 5000ms linear infinite 3000ms, myfirst2-end 200ms linear 11000ms forwards;
     }
     .roll_third {
       @include background('../images/Circle3.png');
-      //animation: animate-start2 20ms linear 2000ms, myfirst3 2000ms linear 3000ms;
       @include prefix(animation, myfirst3 5000ms linear infinite 3000ms);
+      -webkit-animation: myfirst3 5000ms linear infinite 3000ms, myfirst3-end 200ms linear 11000ms forwards;
     }
 
   }
@@ -144,7 +143,7 @@ html {
     width: 28rem;
     top: 17%;
     left: 0;
-    animation: hid 3000ms linear 0ms forwards, shw 5000ms linear 3000ms forwards;
+    -webkit-animation: hid 3000ms linear 0ms forwards, shw 5000ms linear 3000ms forwards;
     .roll_core {
       height: 28rem;
       width: 28rem;
@@ -180,13 +179,13 @@ html {
       width: 4px;
       height: 3.5rem;
       left: 0;
-      -webkit-animation: hid 8500ms linear 0ms forwards, dgLeft 500ms linear 8500ms forwards;
+      -webkit-animation: hid 8500ms linear 0ms forwards, dgLeft 500ms linear 8500ms forwards, hid 1000ms linear 11000ms forwards;
     }
     .check:after {
       width: 6rem;
       height: 4px;
       bottom: 0;
-      -webkit-animation: hid 8500ms linear 0ms forwards, dgRight 500ms linear 9000ms forwards;
+      -webkit-animation: hid 8500ms linear 0ms forwards, dgRight 500ms linear 9000ms forwards, hid 1000ms linear 11000ms forwards;
     }
     .one,
     .two,
@@ -313,6 +312,7 @@ html {
     top: 47%;
     right: -40%;
     @include background('../images/cat.png');
+    background-size: 86% auto;
     height: 32rem;
     opacity: 0.5;
   }
@@ -364,6 +364,17 @@ html {
     @include prefix(transform, rotate(90deg));
   }
 }
+
+@include keyframes(myfirst2-end) {
+  0% {
+    @include prefix(transform, rotate(360deg));
+  }
+  100% {
+    @include prefix(transform, rotate(360deg));
+  }
+
+}
+
 @include keyframes(myfirst3) {
   100% {
     @include prefix(transform, rotate(360deg));
@@ -374,6 +385,16 @@ html {
   0% {
     @include prefix(transform, rotate(360deg));
   }
+}
+
+@include keyframes(myfirst3-end) {
+  0% {
+    @include prefix(transform, rotate(360deg));
+  }
+  100% {
+    @include prefix(transform, rotate(360deg));
+  }
+
 }
 @include keyframes(animate-cloud){
   from {
@@ -492,3 +513,15 @@ html {
     opacity: 1;
   }
 }
+//旋转
+@include keyframes(warp-around) {
+  0% {
+    top: 11%;
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(180deg);
+  }
+  100% {
+    top: 5%;
+    -webkit-transform: scale3d(1, 1, 1) rotateX(360deg);
+  }
+}
+

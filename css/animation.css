@@ -68,13 +68,13 @@ html {
     height: 100%;
     width: 100%;
     background: url("../images/bg_bg.png") no-repeat center;
-    background-size: 100% 100%; }
+    background-size: 100% auto; }
     .bg .bg_bg .bg_fp {
       position: absolute;
       height: 100%;
       width: 100%;
       background: url("../images/jiantou.png") no-repeat center;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       -webkit-animation: animate-cloud 2000ms linear infinite 0ms;
       -moz-animation: animate-cloud 2000ms linear infinite 0ms;
       -o-animation: animate-cloud 2000ms linear infinite 0ms;
@@ -86,10 +86,7 @@ html {
     width: 28rem;
     top: 0;
     left: 0;
-    -webkit-animation: animate-start 3000ms linear 0ms forwards;
-    -moz-animation: animate-start 3000ms linear 0ms forwards;
-    -o-animation: animate-start 3000ms linear 0ms forwards;
-    animation: animate-start 3000ms linear 0ms forwards; }
+    -webkit-animation: animate-start 3000ms linear 0ms forwards, warp-around 1000ms linear 11000ms forwards; }
     .bg .roll .roll_first,
     .bg .roll .roll_second,
     .bg .roll .roll_third,
@@ -100,25 +97,23 @@ html {
       height: 28rem;
       width: 28rem;
       background: url("../images/Circle1.png") no-repeat center;
-      background-size: 100% 100%;
-      -webkit-animation: myfirst1 2000ms linear infinite 3000ms forwards;
-      -moz-animation: myfirst1 2000ms linear infinite 3000ms forwards;
-      -o-animation: myfirst1 2000ms linear infinite 3000ms forwards;
-      animation: myfirst1 2000ms linear infinite 3000ms forwards; }
+      background-size: 100% auto;
+      -webkit-animation: myfirst1 2000ms linear 3000ms forwards;
+      -moz-animation: myfirst1 2000ms linear 3000ms forwards;
+      -o-animation: myfirst1 2000ms linear 3000ms forwards;
+      animation: myfirst1 2000ms linear 3000ms forwards; }
     .bg .roll .roll_second {
       background: url("../images/Circle2.png") no-repeat center;
-      background-size: 100% 100%;
-      -webkit-animation: myfirst2 5000ms linear infinite 3000ms;
-      -moz-animation: myfirst2 5000ms linear infinite 3000ms;
-      -o-animation: myfirst2 5000ms linear infinite 3000ms;
-      animation: myfirst2 5000ms linear infinite 3000ms; }
+      background-size: 100% auto;
+      -webkit-animation: myfirst2 5000ms linear infinite 3000ms, myfirst2-end 200ms linear 11000ms forwards; }
     .bg .roll .roll_third {
       background: url("../images/Circle3.png") no-repeat center;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       -webkit-animation: myfirst3 5000ms linear infinite 3000ms;
       -moz-animation: myfirst3 5000ms linear infinite 3000ms;
       -o-animation: myfirst3 5000ms linear infinite 3000ms;
-      animation: myfirst3 5000ms linear infinite 3000ms; }
+      animation: myfirst3 5000ms linear infinite 3000ms;
+      -webkit-animation: myfirst3 5000ms linear infinite 3000ms, myfirst3-end 200ms linear 11000ms forwards; }
   .bg .roll_bubble {
     position: absolute;
     z-index: 2;
@@ -126,18 +121,18 @@ html {
     width: 28rem;
     top: 17%;
     left: 0;
-    animation: hid 3000ms linear 0ms forwards, shw 5000ms linear 3000ms forwards; }
+    -webkit-animation: hid 3000ms linear 0ms forwards, shw 5000ms linear 3000ms forwards; }
     .bg .roll_bubble .roll_core {
       height: 28rem;
       width: 28rem;
       background: url("../images/Scan.png") no-repeat center;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       animation: core 5000ms linear 3000ms forwards, hid 0ms linear 8000ms forwards; }
     .bg .roll_bubble .core_roll {
       height: 28rem;
       width: 28rem;
       background: url("../images/bao.png") no-repeat center;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       position: absolute;
       top: 3%;
       animation: hid 8000ms linear 0ms forwards, bao 3000ms linear 8000ms forwards; }
@@ -160,12 +155,12 @@ html {
       width: 4px;
       height: 3.5rem;
       left: 0;
-      -webkit-animation: hid 8500ms linear 0ms forwards, dgLeft 500ms linear 8500ms forwards; }
+      -webkit-animation: hid 8500ms linear 0ms forwards, dgLeft 500ms linear 8500ms forwards, hid 1000ms linear 11000ms forwards; }
     .bg .roll_bubble .check:after {
       width: 6rem;
       height: 4px;
       bottom: 0;
-      -webkit-animation: hid 8500ms linear 0ms forwards, dgRight 500ms linear 9000ms forwards; }
+      -webkit-animation: hid 8500ms linear 0ms forwards, dgRight 500ms linear 9000ms forwards, hid 1000ms linear 11000ms forwards; }
     .bg .roll_bubble .one .bubble,
     .bg .roll_bubble .two .bubble,
     .bg .roll_bubble .three .bubble,
@@ -177,11 +172,11 @@ html {
       width: 10rem;
       height: 10rem;
       background: url("../images/bao.png") no-repeat center;
-      background-size: 100% 100%;
-      -webkit-animation: bubble 500ms linear 3000ms forwards;
-      -moz-animation: bubble 500ms linear 3000ms forwards;
-      -o-animation: bubble 500ms linear 3000ms forwards;
-      animation: bubble 500ms linear 3000ms forwards; }
+      background-size: 100% auto;
+      -webkit-animation: bubble 1000ms linear 3000ms forwards;
+      -moz-animation: bubble 1000ms linear 3000ms forwards;
+      -o-animation: bubble 1000ms linear 3000ms forwards;
+      animation: bubble 1000ms linear 3000ms forwards; }
     .bg .roll_bubble .one .line,
     .bg .roll_bubble .two .line,
     .bg .roll_bubble .three .line,
@@ -193,7 +188,7 @@ html {
       width: 4rem;
       height: 5rem;
       background: url("../images/X_1_line.png") no-repeat center;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       -webkit-animation: bubble 200ms linear 3200ms forwards;
       -moz-animation: bubble 200ms linear 3200ms forwards;
       -o-animation: bubble 200ms linear 3200ms forwards;
@@ -211,7 +206,7 @@ html {
     .bg .roll_bubble .two .bubble {
       top: 12%;
       left: 20%;
-      animation: hid 800ms linear 3000ms forwards, bubble 500ms linear 3800ms forwards; }
+      animation: hid 800ms linear 3000ms forwards, bubble 1000ms linear 3800ms forwards; }
     .bg .roll_bubble .two .line {
       top: 17%;
       left: 16%;
@@ -225,14 +220,14 @@ html {
     .bg .roll_bubble .three .bubble {
       top: 16%;
       left: 48%;
-      animation: hid 1600ms linear 3000ms forwards, bubble 500ms linear 4600ms forwards; }
+      animation: hid 1600ms linear 3000ms forwards, bubble 1000ms linear 4600ms forwards; }
     .bg .roll_bubble .three .line {
       top: 4%;
       left: 48%;
       width: 5rem;
       height: 8rem;
       background: url("../images/Z_2_line.png") no-repeat center;
-      background-size: 100% 100%;
+      background-size: 100% auto;
       animation: hid 1600ms linear 3000ms forwards, bubble 200ms linear 4800ms forwards; }
     .bg .roll_bubble .three .text {
       top: 2%;
@@ -241,7 +236,7 @@ html {
     .bg .roll_bubble .four .bubble {
       top: 40%;
       left: 52%;
-      animation: hid 2400ms linear 3000ms forwards, bubble 500ms linear 5400ms forwards; }
+      animation: hid 2400ms linear 3000ms forwards, bubble 1000ms linear 5400ms forwards; }
     .bg .roll_bubble .four .line {
       top: 58%;
       left: 71%;
@@ -255,7 +250,7 @@ html {
     .bg .roll_bubble .five .bubble {
       top: 56%;
       left: 30%;
-      animation: hid 3200ms linear 3000ms forwards, bubble 500ms linear 6200ms forwards; }
+      animation: hid 3200ms linear 3000ms forwards, bubble 1000ms linear 6200ms forwards; }
     .bg .roll_bubble .five .line {
       top: 73%;
       left: 48%;
@@ -271,7 +266,8 @@ html {
     top: 47%;
     right: -40%;
     background: url("../images/cat.png") no-repeat center;
-    background-size: 100% 100%;
+    background-size: 100% auto;
+    background-size: 86% auto;
     height: 32rem;
     opacity: 0.5; }
 
@@ -467,6 +463,50 @@ html {
     -moz-transform: rotate(90deg);
     -o-transform: rotate(90deg);
     transform: rotate(90deg); } }
+@-webkit-keyframes myfirst2-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes myfirst2-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes myfirst2-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes myfirst2-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
 @-webkit-keyframes myfirst3 {
   100% {
     -webkit-transform: rotate(360deg);
@@ -527,6 +567,50 @@ html {
     -o-transform: rotate(270deg);
     transform: rotate(270deg); }
   0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-webkit-keyframes myfirst3-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-moz-keyframes myfirst3-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@-o-keyframes myfirst3-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+@keyframes myfirst3-end {
+  0% {
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg); }
+  100% {
     -webkit-transform: rotate(360deg);
     -moz-transform: rotate(360deg);
     -o-transform: rotate(360deg);
@@ -815,5 +899,33 @@ html {
   100% {
     left: 0;
     opacity: 1; } }
+@-webkit-keyframes warp-around {
+  0% {
+    top: 11%;
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(180deg); }
+  100% {
+    top: 5%;
+    -webkit-transform: scale3d(1, 1, 1) rotateX(360deg); } }
+@-moz-keyframes warp-around {
+  0% {
+    top: 11%;
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(180deg); }
+  100% {
+    top: 5%;
+    -webkit-transform: scale3d(1, 1, 1) rotateX(360deg); } }
+@-o-keyframes warp-around {
+  0% {
+    top: 11%;
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(180deg); }
+  100% {
+    top: 5%;
+    -webkit-transform: scale3d(1, 1, 1) rotateX(360deg); } }
+@keyframes warp-around {
+  0% {
+    top: 11%;
+    -webkit-transform: scale3d(1.2, 1.2, 1.2) rotateX(180deg); }
+  100% {
+    top: 5%;
+    -webkit-transform: scale3d(1, 1, 1) rotateX(360deg); } }
 
 /*# sourceMappingURL=animation.css.map */
