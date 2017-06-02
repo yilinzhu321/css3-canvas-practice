@@ -1,0 +1,17 @@
+<component name="libraryTable">
+  <library name="Generated files" type="javaScript">
+    <properties>
+      <sourceFilesUrls>
+        <item url="file://$PROJECT_DIR$/swiper/js/swiper-compiled.js" />
+        <item url="file://$PROJECT_DIR$/swiper/js/swiper-compiled.js" />
+      </sourceFilesUrls>
+    </properties>
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/button/button-compiled.js" />
+      <root url="file://$PROJECT_DIR$/button/button-compiled.js" />
+      <root url="file://$PROJECT_DIR$/swiper/js/swiper-compiled.js" />
+      <root url="file://$PROJECT_DIR$/swiper/js/swiper-compiled.js" />
+    </CLASSES>
+    <SOURCES />
+  </library>
+</component>
