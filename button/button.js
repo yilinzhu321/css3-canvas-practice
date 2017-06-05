@@ -20,20 +20,20 @@
 
 (function() {
     var button = document.getElementById('button');
-    var click = false;
+    var click = true;
     var a = null;
     button.addEventListener('touchend', function () {
-        if (click == false) {
-            button.innerHTML = '123';
-            click = true;
+        if (click == true) {
+            button.innerHTML = '跳转';
+            click = false;
             a = setTimeout(function () {
                 console.log(a, '1234')
                 console.log('11');
                 clearTimeout(a);
                 console.log(a);
                 button.innerHTML = '按钮';
-                click = false;
-            }, 300);
+                click = true;
+            }, 3000);
         }
      }, false);
 })();
